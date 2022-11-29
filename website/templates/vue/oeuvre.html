@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Oeuvre{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Oeuvre</p>
+      <p class="subtitle">Nos oeuvres entreposés</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="columns is-multiline" style="margin: auto;">
+
+    {% for oeuvre in tab_oeuvres %}
+
+        <div class="column is-half">
+            
+            <div class="tile is-parent">
+            <article class="tile is-child box">
+
+                <p class="title" align="center">{{ oeuvre['nom'] }}</p>
+
+                <figure class="image is-4by3">
+                    <img src="{{ oeuvre['img_lien'] }}">
+                </figure>
+                <br>
+                <a href="{{ url_for( 'views.oeuvre_details', _id = oeuvre['_id'] ) }}">Plus de détails</a>
+                <p class="subtitle" align="right">Fait en {{ oeuvre['annee'] }}</p>
+
+            </article>
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

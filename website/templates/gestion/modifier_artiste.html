@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}Modifier Piece{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Artiste</p>
+      <p class="subtitle">Liste des artistes</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container" align="center">
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Pays</th>
+            <th>Periode</th>
+            <th><abbr title="description">Description</abbr></th>
+            <th>Année de décès</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        
+        {% for artist in artists %}    
+            <tr>
+                <th>{{ artist._id }}</th>
+                <td>{{ artist.nom }}</td>
+                <td>{{ artist.prenom }}</td>
+                <td>{{ artist.pays }}</td>
+                <td>{{ artist.periode }}</td>
+                <td>{{ artist.description }}</td>
+                <td>{{ artist.deces }}</td>
+                <td>
+                    <div class="buttons">
+                        <button class="button is-info"><a href="{{ url_for('manage.update_artist_details', _id = artist._id) }}">Modifier</a></button>
+                        <button class="button is-danger"><a href="{{ url_for('manage.delete_artist', _id = artist._id) }}">Supprimer</a></button>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

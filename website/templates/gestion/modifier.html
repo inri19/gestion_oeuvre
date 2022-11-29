@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Nouveau{% endblock %}
+
+{% block content %}
+
+<br>
+
+<div class="container">
+
+    <div align="center" class="columns is-3">
+
+        <div class="column" style="border: black solid 2.5px; border-radius: 10px; margin:10px;">
+            <a href="{{ url_for('manage.update_room') }}">
+            <img src="https://img.icons8.com/color/96/null/room.png"/>
+            <h3 class="title">Piece</h3>
+            </a>
+        </div>
+
+        
+        <div class="column" style="border: black solid 2.5px; border-radius: 10px; margin:10px;">
+            <a href="{{ url_for('manage.update_oeuvre') }}">
+            <img src="https://img.icons8.com/color/96/null/venus-de-milo.png"/>
+            <h3 class="title">Oeuvre</h3>
+            </a>
+        </div>
+        
+
+        <div class="column" style="border: black solid 2.5px; border-radius: 10px; margin:10px;">
+            <a href="{{ url_for('manage.update_artist') }}">
+            <img src="https://img.icons8.com/color/96/null/ankh.png"/>
+            <h3 class="title">Artiste</h3>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

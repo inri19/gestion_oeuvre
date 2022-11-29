@@ -1,0 +1,121 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+html
+{
+    /* https://wallpaperaccess.com/full/52461.jpg */
+    background-image: url('https://ak1.ostkcdn.com/images/products/is/images/direct/101cbeb13118bce4432b0f25d563fef04f953ff1/Dark-Tropical-Mix-Removable-Wallpaper.jpg');
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.container-first {
+    padding-top: 100px;
+    padding-left : 100px;
+}
+
+.container-btnso {
+    position:relative;
+    bottom: -220px;
+    padding-bottom: 25px;
+}
+
+.container-btnso a {
+    margin: 10px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 110px;
+    color: #f1f1f1;
+    font-family: 'Ubuntu', sans-serif;
+}
+h1 span {
+    position: relative;
+}
+
+.btno-first {
+    border: 2px solid #f1f1f1;
+    outline: none;
+    background: transparent;
+    font-size: 30px;
+    padding: 20px;
+    width: 300px;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+.btno-first:nth-child(1){
+    margin-right: 30px;
+}
+.btno-first:hover {
+    transition: all 0.3s ease-in-out;
+    background: #FBCA1F;
+    color: #333;
+    border: 2px solid #333;
+}
+.lignes {
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.l1 {
+    width: 250px;
+    height: 3px;
+    background: #FBCA1F;
+    border-radius: 5px;
+}
+.l2 {
+    width: 140px;
+    height: 3px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    position: relative;
+    top: 20px;
+}
+
+.logo {
+    position: absolute;
+    right: 2.9%;
+    top: 4%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+.medias {
+    list-style-type: none;
+    position: absolute;
+    right: 3.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bulle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background: #f1f1f1;
+    cursor: pointer;
+    position: relative;
+}
+
+.logo-medias {
+    width: 40px;
+    height: 40px;
+}

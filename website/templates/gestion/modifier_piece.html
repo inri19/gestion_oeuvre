@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Modifier Piece{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Piece</p>
+      <p class="subtitle">Liste des pieces</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container" align="center">
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th><abbr title="description">Description</abbr></th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        
+        {% for piece in pieces %}    
+            <tr>
+                <th>{{ piece._id }}</th>
+                <td>{{ piece.nom }}</td>
+                <td>{{ piece.description }}</td>
+                <td>
+                    <div class="buttons">
+                        <button class="button is-info"><a href="{{ url_for('manage.update_room_details', _id = piece._id) }}">Modifier</a></button>
+                        <button class="button is-danger"><a href="{{ url_for('manage.delete_room', _id = piece._id) }}">Supprimer</a></button>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

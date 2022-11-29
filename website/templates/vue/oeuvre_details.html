@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br><br>
+
+<div class="container">
+    <div class="content">
+
+        <div class="container tile">
+            <figure>
+                <img src="{{ oeuvre['img_lien'] }}" style="max-width: 390px; height: auto; margin-left:-32px">
+                <figcaption>
+                Création : {{ oeuvre['annee'] }}
+                </figcaption>
+            </figure>
+        </div>
+
+
+        <h1>{{ oeuvre['nom'] }}</h1>
+
+        <h4>Description</h4>
+        <p>{{ oeuvre['description'] }}</p>
+
+        <p>Exposé dans la piece <strong>{{ piece['nom'] }}</strong></p>
+
+        <p>Réalisé par : <strong>{{ artiste['prenom'] }} {{ artiste['nom'] }}</strong></p>
+
+    </div>
+</div>
+
+{% endblock %}

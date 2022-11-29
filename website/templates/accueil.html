@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/manage">
+            <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/null/external-great-sphinx-of-giza-vacation-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"/>
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+
+            <div class="navbar-start">
+
+                <a class="navbar-item" href="/" style="font-weight: bold;">Home</a>
+                <a class="navbar-item" href="{{ url_for('views.oeuvre') }}" style="font-weight: bold;">Oeuvre</a>
+                <a class="navbar-item" href="{{ url_for('views.piece') }}" style="font-weight: bold;">Piece</a>
+                <a class="navbar-item" href="{{ url_for('views.decouverte') }}" style="font-weight: bold;">Decouverte</a>
+
+            </div>
+      
+        </div>
+
+    </nav>
+
+    <div class="lignes">
+        <div class="l1"></div>
+        <div class="l2"></div>
+    </div>
+
+    <div class="container-first">
+        <h1><span>Découvrez </span><span>nos </span><span>expositions. </span></h1>
+
+        <div class="container-btnso">
+            <a href="{{ url_for('views.piece') }}">
+                <button class="btno-first b1">Entrer</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %}Artiste{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Artiste</p>
+      <p class="subtitle">Modifier un artiste</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container">
+
+    <form method="post">
+        
+        <div class="field">
+
+            <label class="label">Nom</label>
+
+            <div class="control">
+              <input name="nom" class="input" type="text" value="{{ artist.nom }}">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Prenom</label>
+
+            <div class="control">
+              <input name="prenom" class="input" type="text" value="{{ artist.prenom }}">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Nationalité</label>
+
+            <div class="control">
+              <input name="pays_nat" class="input" type="text" value="{{ artist.pays }}">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Période Artistique</label>
+
+            <div class="control">
+              <input name="periode_art" class="input" type="text" value="{{ artist.periode }}">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Image</label>
+
+            <div class="control">
+              <input name="img" class="input" type="text" value="{{ artist.img_lien }}">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Description</label>
+
+            <div class="control">
+              <textarea name="description" class="textarea" placeholder="Petite Description">{{ artist.description }}</textarea>
+            </div>
+
+        </div>
+
+        <div class="field">
+
+            <label class="label">Année de décès</label>
+
+            <div class="control">
+              <input name="annee_mort" class="input" type="number" value="{{ artist.deces }}">
+            </div>
+            
+        </div>
+
+        <div class="control">
+            <button type="submit" class="button is-dark">Valider</button>
+        </div>
+
+    </form>
+
+    <br>
+
+</div>
+
+{% endblock %}

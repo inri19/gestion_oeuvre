@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}Oeuvre{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">{{ piece.nom }}</p>
+      <p class="subtitle">Nos oeuvres entreposés</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container">
+
+    <div class="columns  is-2">
+
+        {% for oeuvre in oeuvres %}
+
+            <div class="column">
+                
+                <div class="card">
+                    <div class="card-content">
+
+                        <p class="title">{{ oeuvre.nom }}</p>
+
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="{{ oeuvre.img_lien }}">
+                            </figure>
+                        </div>
+
+                        <br>
+
+                        <div class="content">
+                            <p class="subtitle" align="right">Fait en {{ oeuvre.annee }}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        {% endfor %}
+    
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %}Artiste{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Artiste</p>
+      <p class="subtitle">Enregister un artiste</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container">
+
+    <form method="post">
+        
+        <div class="field">
+
+            <label class="label">Nom</label>
+
+            <div class="control">
+              <input name="nom" class="input" type="text" placeholder="Nom">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Prenom</label>
+
+            <div class="control">
+              <input name="prenom" class="input" type="text" placeholder="Prenom">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Nationalité</label>
+
+            <div class="control">
+              <input name="pays_nat" class="input" type="text" placeholder="Nationalité">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Période Artistique</label>
+
+            <div class="control">
+              <input name="periode_art" class="input" type="text" placeholder="Courant Artistique">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Image</label>
+
+            <div class="control">
+              <input name="img" class="input" type="text" placeholder="Entrer URL d une image">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Description</label>
+
+            <div class="control">
+              <textarea name="description" class="textarea" placeholder="Petite Description"></textarea>
+            </div>
+
+        </div>
+
+        <div class="field">
+
+            <label class="label">Année de décès</label>
+
+            <div class="control">
+              <input name="annee_mort" class="input" type="number" placeholder="Année Mort">
+            </div>
+            
+        </div>
+
+        <div class="control">
+            <button type="submit" class="button is-dark">Valider</button>
+        </div>
+
+    </form>
+
+    <br>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Nos Pieces{% endblock %}
+
+{% block content %}
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Nos pieces</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container">
+
+    <div class="columns is-multiline" style="margin: auto;">
+
+        {% for piece in tab_pieces %}
+
+            <div class="column is-one-third">
+                
+                <div class="card">
+                    <div class="card-content">
+
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src="{{ piece['img_lien'] }}" style="background-image:cover;">
+                            </figure>
+                        </div>
+
+                        <br>
+
+                        <div class="content">
+                            <p class="title">{{ piece['nom'] }}</p>
+                            <p class="subtitle">Description :</p>
+                            {{ piece['description'] }}
+                            <br>
+                            <a href="{{ url_for('views.piece_details', _id= piece['_id'] ) }}">Voir plus</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        {% endfor %}
+    
+    </div>
+
+</div>
+
+{% endblock %}

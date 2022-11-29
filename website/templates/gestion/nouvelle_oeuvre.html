@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block title %}Nouvelle Oeuvre{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Oeuvre</p>
+      <p class="subtitle">Enregister une Oeuvre</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container">
+
+    <form method="post">
+        
+        <div class="field">
+
+            <label class="label">Nom</label>
+
+            <div class="control">
+              <input name="nom" class="input" type="text" placeholder="Nom">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Type</label>
+
+            <div class="control">
+              <input name="type" class="input" type="text" placeholder="Prenom">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Image</label>
+
+            <div class="control">
+              <input name="img" class="input" type="text" placeholder="Entrer URL d une image">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Description</label>
+
+            <div class="control">
+              <textarea name="description" class="textarea" placeholder="Petite Description"></textarea>
+            </div>
+
+        </div>
+
+        <div class="field">
+
+            <label class="label">Année</label>
+
+            <div class="control">
+              <input name="annee" class="input" type="number" placeholder="Année de l oeuvre">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Artiste</label>
+
+            <div class="control">
+
+                <div class="select is-dark">
+
+                <select name="auteur">
+
+                    {% for auteur in auteurs %}
+                    <option value="{{ auteur._id }}">{{ auteur.nom }}</option>
+                    {% endfor %}
+
+                </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="field">
+
+            <label class="label">Piece</label>
+
+            <div class="control">
+
+                <div class="select is-dark">
+
+                    <select name="piece">
+
+                        {% for piece in pieces %}
+                        <option value="{{ piece._id }}">{{ piece.nom }}</option>
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="control">
+            <button type="submit" class="button is-dark">Valider</button>
+        </div>
+
+    </form>
+
+    <br>
+
+</div>
+
+{% endblock %}

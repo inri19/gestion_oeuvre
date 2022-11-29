@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Artiste{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Découverte</p>
+      
+    </div>
+
+</section>
+
+<br>
+<br>
+
+<div class="container">
+
+    <div class="columns card" style="background-color: #C4C2C2; border: 2px solid black; margin:auto;">
+
+        <div class="column is-6">
+
+            <figure class="image is-4by3">
+                <img src="{{ auteur.img_lien }}" alt="Placeholder image">
+            </figure>
+
+        </div>
+
+        <div class="column is-6 is-medium">
+
+            <div class="content">
+                <h1>{{ auteur.nom }} {{ auteur.prenom }}</h1>
+                <h3>Petite description :</h3>
+                <p>{{ auteur.description }}</p>
+                <h6>Courant artistique : {{ auteur.periode }}</h6>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br>
+
+{% endblock %}

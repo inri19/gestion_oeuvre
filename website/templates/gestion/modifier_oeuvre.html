@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}Modifier Oeuvre{% endblock %}
+
+{% block content %}
+
+<section class="hero is-dark">
+
+    <div class="hero-body">
+
+      <p class="title">Oeuvre</p>
+      <p class="subtitle">Liste des oeuvres</p>
+      
+    </div>
+
+</section>
+
+<br>
+
+<div class="container" align="center">
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Type</th>
+            <th><abbr title="description">Description</abbr></th>
+            <th>Année</th>
+            <th>Auteur</th>
+            <th>Piece</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        
+        {% for oeuvre in oeuvres.values() %}    
+            <tr>
+                <th>{{ oeuvre['id'] }}</th>
+                <td>{{ oeuvre['nom'] }}</td>
+                <td>{{ oeuvre['type'] }}</td>
+                <td>{{ oeuvre['description'] }}</td>
+                <td>{{ oeuvre['annee'] }}</td>
+                <td>{{ oeuvre['auteur'] }}</td>
+                <td>{{ oeuvre['piece'] }}</td>
+                <td>
+                    <div class="buttons">
+                        <button class="button is-info"><a href="{{ url_for('manage.update_oeuvre_details', _id = oeuvre['id']) }}">Modifier</a></button>
+                        <button class="button is-danger"><a href="{{ url_for('manage.delete_oeuvre', _id = oeuvre['id']) }}">Supprimer</a></button>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

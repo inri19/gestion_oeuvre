@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Piece{% endblock %}
+
+{% block content %}
+
+<br>
+
+<div class="container">
+
+    <form method="post">
+        
+        <div class="field">
+
+            <label class="label">Nom</label>
+
+            <div class="control">
+              <input name="nom_piece" class="input" type="text" value="{{ piece.nom }}">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Image</label>
+
+            <div class="control">
+              <input name="img" class="input" type="text" value="{{ piece.img_lien }}">
+            </div>
+            
+        </div>
+
+        <div class="field">
+
+            <label class="label">Description</label>
+
+            <div class="control">
+              <textarea name="description" class="textarea">{{ piece.description }}</textarea>
+            </div>
+
+        </div>
+
+        <div class="control">
+            <button type="submit" class="button is-dark">Modifier</button>
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+*
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+html
+{
+    /*  */
+    background-image: url('https://wallpaperforu.com/wp-content/uploads/2020/07/texture-wallpaper-20070911380958.jpg');
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+}

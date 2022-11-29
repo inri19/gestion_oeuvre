@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<br>
+
+<div class="container" >
+
+    <h1 class="title" align="center">Gestion</h1>
+
+    <br><br>
+    
+    <div align="center" class="columns  is-2">
+
+        <div class="column" style="border: black solid 2.5px; border-radius: 10px; margin:10px;">
+            <a href="{{ url_for('manage.new') }}">
+            <img src="https://img.icons8.com/fluency/96/null/add-rule.png"/>
+            <h3 class="title">Nouveau</h3>
+            </a>
+        </div>
+
+        <div class="column" style="border: black solid 2.5px; border-radius: 10px; margin:10px;">
+            <a href="{{ url_for('manage.update') }}">
+            <img src="https://img.icons8.com/fluency/96/null/approve-and-update.png"/>
+            <h3 class="title">Modifier & Supprimer</h3>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+    .column:hover
+    {
+        background-color: gray;
+    }
+</style>
+
+{% endblock %}
