@@ -165,6 +165,7 @@ def update():
 @manage.route('/manage/update/room')
 def update_room():
 
+    flash('Attention lorsque vous supprimez une piece qui contient une/des oeuvres seront envoyés a l\'entrepot', category='warning')
     pieces = musee.piece.find()
 
     return render_template('gestion/modifier_piece.html', pieces=pieces)
@@ -191,7 +192,7 @@ def update_oeuvre():
 @manage.route('/manage/update/artist')
 def update_artist():
 
-    flash('Attention lorsque vous supprimer un artiste toutes ses oeuvres seront egalement supprimer !!', category='error')
+    flash('Attention lorsque vous supprimer un artiste toutes ses oeuvres seront egalement supprimer !!', category='warning')
 
     artists = musee.author.find()
 

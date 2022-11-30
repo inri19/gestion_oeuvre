@@ -36,6 +36,8 @@
                         </div>
 
                         <br>
+                        
+                        <a href="{{ url_for( 'views.oeuvre_details', _id = oeuvre['_id'] ) }}">Plus de détails</a>
 
                         <div class="content">
                             <p class="subtitle" align="right">Fait en {{ oeuvre.annee }}</p>

@@ -1,64 +1,28 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+{% extends 'base.html' %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
-</head>
-<body>
+{% block content %}
 
-    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
 
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/manage">
-            <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/null/external-great-sphinx-of-giza-vacation-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"/>
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
+<section class="hero is-fullheight-with-navbar" style="background-image: url('https://ak1.ostkcdn.com/images/products/is/images/direct/101cbeb13118bce4432b0f25d563fef04f953ff1/Dark-Tropical-Mix-Removable-Wallpaper.jpg'); background-size: cover;">
+    <div class="hero-body">
 
-            <div class="navbar-start">
-
-                <a class="navbar-item" href="/" style="font-weight: bold;">Home</a>
-                <a class="navbar-item" href="{{ url_for('views.oeuvre') }}" style="font-weight: bold;">Oeuvre</a>
-                <a class="navbar-item" href="{{ url_for('views.piece') }}" style="font-weight: bold;">Piece</a>
-                <a class="navbar-item" href="{{ url_for('views.decouverte') }}" style="font-weight: bold;">Decouverte</a>
-
-            </div>
-      
+        <div class="container has-text-centered">
+            <p class="title has-text-white">Decouvrez nos expositions..</p>
         </div>
 
-    </nav>
-
-    <div class="lignes">
-        <div class="l1"></div>
-        <div class="l2"></div>
     </div>
 
-    <div class="container-first">
-        <h1><span>Découvrez </span><span>nos </span><span>expositions. </span></h1>
-
-        <div class="container-btnso">
-            <a href="{{ url_for('views.piece') }}">
-                <button class="btno-first b1">Entrer</button>
-            </a>
-        </div>
+    <div class="hero-foot">
+        <nav class="tabs">
+          <div class="container">
+            <ul>
+              <li style="background-color: #43730E; border-top-left-radius: 5px; border-top-right-radius: 5px; padding: 0px 30px;"><a class="has-text-white" href="{{ url_for('views.piece') }}">Découvrez</a></li>
+            </ul>
+          </div>
+        </nav>
     </div>
 
-    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+</section>
+  
 
-</body>
-</html>
+{% endblock %}
